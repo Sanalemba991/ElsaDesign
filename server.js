@@ -71,13 +71,13 @@ ue
       name,
       email,
       password: hashedPassword,
-      phone: phone || null, // Set to null if phone is not provided
+      phone: phone || null, 
     });
 
-    // Save the new user
+    
     const savedUser = await newUser.save();
 
-    // Send response back to client
+   
     res.status(201).json({
       name: savedUser.name,
       email: savedUser.email,
@@ -89,16 +89,16 @@ ue
   }
 });
 
-// Login Route
+
 app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-    // Find user by email
+   
     const user = await UserModel.findOne({ email });
 
     if (user) {
-      // Compare the entered password with the stored password
+      
       const passwordMatch = await bcrypt.compare(password, user.password);
 
       if (passwordMatch) {
@@ -114,13 +114,13 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// Home Route
+
 app.get("/", (req, res) => {
   console.log("Server is running");
   res.status(200).json({ message: "Sanalemba is good" });
 });
 
-// Start the server
+
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
 });
