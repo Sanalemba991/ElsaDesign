@@ -55,7 +55,7 @@ app.post("/signup", async (req, res) => {
       return res.status(409).json({ error: "Email already exists" });
     }
 
-ue
+
     if (phone) {
       const existingPhoneUser = await UserModel.findOne({ phone });
       if (existingPhoneUser) {
