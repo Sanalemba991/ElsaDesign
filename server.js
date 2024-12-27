@@ -11,26 +11,37 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// Connect to MongoDB
+
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to MongoDB");
 
-    // Insert product data into the database after the connection is established
-    ProductModel.insertMany(data.products)
-      .then(() => {
-        console.log("Product data successfully inserted!");
+    
+    ProductModel.findOne({ id: data.products[0].id })
+      .then((existingProduct) => {
+        if (existingProduct) {
+          console.log("Product data already exists in the database.");
+        } else {
+      
+          ProductModel.insertMany(data.products)
+            .then(() => {
+              console.log("Product data successfully inserted!");
+            })
+            .catch((err) => {
+              console.error("Error inserting product data:", err);
+            });
+        }
       })
       .catch((err) => {
-        console.error("Error inserting product data:", err);
+        console.error("Error checking existing product data:", err);
       });
   })
   .catch((err) => {
     console.error("Error connecting to MongoDB:", err);
   });
 
-// Signup Route
+
 app.post("/signup", async (req, res) => {
   try {
     const { name, email, password, phone } = req.body;
@@ -39,13 +50,12 @@ app.post("/signup", async (req, res) => {
       return res.status(400).json({ error: "All fields are required" });
     }
 
-    // Check if user with the same email already exists
     const existingUser = await UserModel.findOne({ email });
     if (existingUser) {
       return res.status(409).json({ error: "Email already exists" });
     }
 
-    // If phone is provided, check if it's unique
+ue
     if (phone) {
       const existingPhoneUser = await UserModel.findOne({ phone });
       if (existingPhoneUser) {
@@ -53,10 +63,10 @@ app.post("/signup", async (req, res) => {
       }
     }
 
-    // Hash the password before saving
+
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // Create new user object
+
     const newUser = new UserModel({
       name,
       email,
