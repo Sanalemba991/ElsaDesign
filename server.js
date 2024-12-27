@@ -11,19 +11,16 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("Connected to MongoDB");
 
-    
     ProductModel.findOne({ id: data.products[0].id })
       .then((existingProduct) => {
         if (existingProduct) {
           console.log("Product data already exists in the database.");
         } else {
-      
           ProductModel.insertMany(data.products)
             .then(() => {
               console.log("Product data successfully inserted!");
@@ -41,7 +38,6 @@ mongoose
     console.error("Error connecting to MongoDB:", err);
   });
 
-
 app.post("/signup", async (req, res) => {
   try {
     const { name, email, password, phone } = req.body;
@@ -55,7 +51,6 @@ app.post("/signup", async (req, res) => {
       return res.status(409).json({ error: "Email already exists" });
     }
 
-
     if (phone) {
       const existingPhoneUser = await UserModel.findOne({ phone });
       if (existingPhoneUser) {
@@ -63,21 +58,17 @@ app.post("/signup", async (req, res) => {
       }
     }
 
-
     const hashedPassword = await bcrypt.hash(password, 10);
-
 
     const newUser = new UserModel({
       name,
       email,
       password: hashedPassword,
-      phone: phone || null, 
+      phone: phone || null,
     });
 
-    
     const savedUser = await newUser.save();
 
-   
     res.status(201).json({
       name: savedUser.name,
       email: savedUser.email,
@@ -89,16 +80,13 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-
 app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
-   
     const user = await UserModel.findOne({ email });
 
     if (user) {
-      
       const passwordMatch = await bcrypt.compare(password, user.password);
 
       if (passwordMatch) {
@@ -114,12 +102,10 @@ app.post("/login", async (req, res) => {
   }
 });
 
-
 app.get("/", (req, res) => {
   console.log("Server is running");
   res.status(200).json({ message: "Sanalemba is good" });
 });
-
 
 app.listen(process.env.PORT, () => {
   console.log(`Server is running on port ${process.env.PORT}`);
