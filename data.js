@@ -1,10 +1,11 @@
+
 const data = {
     products: [
       {
         id: 1,
         items: [
           {
-            "ProductPicture": "PICTURE",
+            "ProductPictureQ": "PICTURE",
             "Name": "AGATE ORNAMENT",
             "ProductName": "RD3927S",
             "Quantity": 1,
@@ -443,5 +444,5 @@ const data = {
     ]
   };
   
-  export default data;
+  module.exports =data;
   
