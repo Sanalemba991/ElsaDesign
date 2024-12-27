@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true,  // Ensure email is unique
+        unique: true,  
     },
     password: {
         type: String,
@@ -16,8 +16,8 @@ const userSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
-        unique: true,   // Ensure phone is unique
-        sparse: true,   // Allow `null` values and prevent duplicate key errors
+        unique: true,   
+        sparse: true,   
     }
 });
 
