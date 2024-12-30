@@ -3,7 +3,7 @@ const data = {
     {
       id: 1,
       items: {
-        ProductPicture: "",
+        ProductPicture: "/images/agetate.png",
         ProductName: "AGATE ORNAMENT",
         ModelNumber: "RD3927S and RD3927L ",
         Quantity: "1 set of 2",
@@ -15,7 +15,7 @@ const data = {
       id: 2,
       items: [
         {
-          ProductPicture: "PICTURE",
+          ProductPicture: "/images/resin.png",
           ProductName: "RESIN SCULPTURE",
           ModelNumber: "SM-BJ721",
           Quantity: "1",
@@ -28,7 +28,7 @@ const data = {
     {
       id: 3,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/crystalfruit.png",
         ProductName: "CRYSTAL FRUIT DECOR",
         ModelNumber: "RD5713 and RD5714",
         Quantity: "1 set of 2",
@@ -40,7 +40,7 @@ const data = {
     {
       id: 4,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/globe.png",
         ProductName: "GLOBAL TABLE DECOR",
         ModelNumber: "RD3964L and RD3964S",
         Quantity: "1",
