@@ -2,14 +2,19 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const UserModel = require("./model/User");
-const ProductModel = require("./model/Product");
+const fast2sms = require("fast-two-sms");
+const otplib = require("otplib");
+const UserModel = require("./model/User.js");
 const data = require("./data.js");
+const ProductModel = require("./model/Product");
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
+
+
+app.use('/images', express.static('images'));
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -37,6 +42,30 @@ mongoose
   .catch((err) => {
     console.error("Error connecting to MongoDB:", err);
   });
+
+let otpStore = {};
+
+const generateOTP = () => {
+  const secret = otplib.authenticator.generateSecret();
+  return otplib.authenticator.generate(secret);
+};
+
+const sendMessage = async (mobile, token) => {
+  const options = {
+    authorization: process.env.FAST2SMS_API_KEY,
+    message: `Your OTP verification code is ${token}`,
+    numbers: [mobile],
+  };
+
+  try {
+    const response = await fast2sms.sendMessage(options);
+    console.log("OTP sent successfully:", response);
+    return { success: true, message: "OTP sent successfully!" };
+  } catch (error) {
+    console.error("Error details:", error.response ? error.response.data : error);
+    return { success: false, message: "Failed to send OTP." };
+  }
+};
 
 app.post("/signup", async (req, res) => {
   try {
@@ -69,14 +98,45 @@ app.post("/signup", async (req, res) => {
 
     const savedUser = await newUser.save();
 
-    res.status(201).json({
-      name: savedUser.name,
-      email: savedUser.email,
-      id: savedUser._id,
-    });
+    const token = generateOTP();
+    otpStore[phone] = token;
+
+    const result = await sendMessage(phone, token);
+    if (result.success) {
+      res.status(201).json({
+        name: savedUser.name,
+        email: savedUser.email,
+        id: savedUser._id,
+        otpSent: true,
+        message:
+          "User registered successfully. OTP sent to the registered phone number.",
+      });
+    } else {
+      res
+        .status(500)
+        .json({ error: "User registered, but failed to send OTP." });
+    }
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: error.message });
+  }
+});
+
+app.post("/verify-otp", (req, res) => {
+  const { mobileNumber, otp } = req.body;
+
+  if (!otp || !mobileNumber) {
+    return res
+      .status(400)
+      .json({ success: false, message: "Mobile number and OTP are required." });
+  }
+
+  if (otpStore[mobileNumber] && otpStore[mobileNumber] === otp) {
+    res
+      .status(200)
+      .json({ success: true, message: "OTP verified successfully!" });
+  } else {
+    res.status(400).json({ success: false, message: "Invalid OTP." });
   }
 });
 
@@ -99,6 +159,33 @@ app.post("/login", async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ error: error.message });
+  }
+});
+
+app.get("/products", async (req, res) => {
+  try {
+    const products = await ProductModel.find();
+    if (products.length === 0) {
+      return res.status(404).json({ error: "No products found" });
+    }
+    res.status(200).json({ products });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch products" });
+  }
+});
+
+app.get("/products/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const product = await ProductModel.findOne({ id });
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+    res.status(200).json({ product });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to fetch product" });
   }
 });
 
