@@ -7,12 +7,15 @@ const otplib = require("otplib");
 const UserModel = require("./model/User.js");
 const data = require("./data.js");
 const ProductModel = require("./model/Product");
+const cors = require("cors"); 
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
+
+app.use(cors());
 
 app.use('/images', express.static('images'));
 
