@@ -53,7 +53,7 @@ const data = {
       id: 5,
       items: [
         {
-          ProductPicture: "PICTURE",
+          ProductPicture: "/images/swarn.png",
           ProductName: "ARTISTIC SWAN",
           ModelNumber: "DECOR",
           Quantity: "1",
@@ -66,7 +66,7 @@ const data = {
     {
       id: 6,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/metal.png",
         ProductName: "METAL MOUNTAIN",
         ModelNumber: "SM-Z s278 and SM-Z s279",
         Quantity: 1,
@@ -78,7 +78,7 @@ const data = {
     {
       id: 7,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/crystal.png",
         ProductName: "CRYSTAL FLOWER",
         ModelNumber: "RD5712L and RD5712S",
         Quantity: 1,
@@ -90,7 +90,7 @@ const data = {
     {
       id: 8,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/Resin.png",
         ProductName: "RESIN ORNAMENT",
         ModelNumber: "SM-Z s311 and SM-Z s312",
         Quantity: "1 set of 2",
@@ -103,7 +103,7 @@ const data = {
       id: 9,
       items: [
         {
-          ProductPicture: "PICTURE",
+          ProductPicture: "/images/cake.png",
           ProductName: "CAKE STAND SNACKS PLATTER",
           ModelNumber: "DECOR",
           Quantity: "1",
@@ -116,7 +116,7 @@ const data = {
     {
       id: 10,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/deer.png",
         ProductName: "DEER STATUE",
         ModelNumber: "RD5799L and RD5799S",
         Quantity: "1",
@@ -128,7 +128,7 @@ const data = {
     {
       id: 11,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/deer2.png",
         ProductName: "DEER STATUE 2",
         ModelNumber: "RD5543L and RD5543S",
         Quantity: 1,
@@ -140,7 +140,7 @@ const data = {
     {
       id: 12,
       items: {
-        ProductPicture: "PICTURE",
+        ProductPicture: "/images/cranecr.png",
         ProductName: "CRYSTAL CRANE BIRD",
         ModelNumber: "RD6151 and RD6152",
         Quantity: "1set of 2",
