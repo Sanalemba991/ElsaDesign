@@ -2,25 +2,14 @@ const data = {
   products: [
     {
       id: 1,
-      items: [
-        {
-          ProductPicture: "/images/1.png",
-          ProductName: "AGATE ORNAMENT",
-          ModelNumber: "RD3927S",
-          Quantity: 1,
-          Size: "120X70X190",
-          Price: 8999,
-        },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "AGATE ORNAMENT",
-          ModelNumber: "RD3927L",
-          Quantity: 1,
-          Size: "120X70X260",
-
-          Price: 8999,
-        },
-      ],
+      items: {
+        ProductPicture: "",
+        ProductName: "AGATE ORNAMENT",
+        ModelNumber: "RD3927S and RD3927L ",
+        Quantity: 1,
+        Size: "120X70X190 and 120X70X260 ",
+        Price: 8999,
+      },
     },
     {
       id: 2,
@@ -38,49 +27,27 @@ const data = {
     },
     {
       id: 3,
-      items: [
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "CRYSTAL FRUIT DECOR",
-          ModelNumber: "RD5713",
-          Quantity: 1,
-          Size: "80X110X280",
+      items: {
+        ProductPicture: "PICTURE",
+        ProductName: "CRYSTAL FRUIT DECOR",
+        ModelNumber: "RD5713 and RD5714",
+        Quantity: 1,
+        Size: "80X110X280 and 80X130X250",
 
-          Price: 18999,
-        },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "CRYSTAL FRUIT DECOR",
-          ModelNumber: "RD5714",
-          Quantity: 1,
-          Size: "80X130X250",
-
-          Price: 18999,
-        },
-      ],
+        Price: 18999,
+      },
     },
     {
       id: 4,
-      items: [
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "GLOBAL TABLE DECOR",
-          ModelNumber: "RD3964L",
-          Quantity: 1,
-          Size: "240X510",
+      items: {
+        ProductPicture: "PICTURE",
+        ProductName: "GLOBAL TABLE DECOR",
+        ModelNumber: "RD3964L and RD3964S",
+        Quantity: 1,
+        Size: "240X510 and 240X450",
 
-          Price: 12999,
-        },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "GLOBAL TABLE DECOR",
-          ModelNumber: "RD3964S",
-          Quantity: 1,
-          Size: "240X450",
-
-          Price: 12999,
-        },
-      ],
+        Price: 12999,
+      },
     },
     {
       id: 5,
@@ -98,72 +65,45 @@ const data = {
     },
     {
       id: 6,
-      items: [
+      items: 
         {
           ProductPicture: "PICTURE",
           ProductName: "METAL MOUNTAIN",
-          ModelNumber: "SM-Z s278",
+          ModelNumber: "SM-Z s278 and SM-Z s279",
           Quantity: 1,
-          Size: "280X80X320",
+          Size: "280X80X320 and 280X70X270",
 
           Price: 14999,
         },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "METAL MOUNTAIN",
-          ModelNumber: "SM-Z s279",
-          Quantity: 1,
-          Size: "280X70X270",
-
-          Price: 14999,
-        },
-      ],
+      
     },
     {
       id: 7,
-      items: [
+      items: 
         {
           ProductPicture: "PICTURE",
           ProductName: "CRYSTAL FLOWER",
-          ModelNumber: "RD5712L",
+          ModelNumber: "RD5712L and RD5712S",
           Quantity: 1,
-          Size: "230X230X480",
+          Size: "230X230X480 and 230X230X410",
 
           Price: 20999,
         },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "CRYSTAL FLOWER",
-          ModelNumber: "RD5712S",
-          Quantity: 1,
-          Size: "230X230X410",
-
-          Price: 20999,
-        },
-      ],
+      
     },
     {
       id: 8,
-      items: [
+      items: 
         {
           ProductPicture: "PICTURE",
           ProductName: "RESIN ORNAMENT",
-          ModelNumber: "SM-Z s311",
+          ModelNumber: "SM-Z s311 and SM-Z s312",
           Quantity: 1,
-          Size: "140X120X320",
+          Size: "140X120X320 and 200X100X180",
 
           Price: 18499,
         },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "RESIN ORNAMENT",
-          ModelNumber: "SM-Z s312",
-          Quantity: 1,
-          Size: "200X100X180",
-
-          Price: 18499,
-        },
-      ],
+      
     },
     {
       id: 9,
@@ -181,105 +121,69 @@ const data = {
     },
     {
       id: 10,
-      items: [
+      items: 
         {
           ProductPicture: "PICTURE",
           ProductName: "DEER STATUE",
-          ModelNumber: "RD5799L",
+          ModelNumber: "RD5799L and RD5799S",
           Quantity: 1,
-          Size: "140X210X370",
+          Size: "140X210X370 and 160X70X280",
 
           Price: 26999,
         },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "DEER STATUE",
-          ModelNumber: "RD5799S",
-          Quantity: 1,
-          Size: "160X70X280",
-
-          Price: 26999,
-        },
-      ],
+        
     },
     {
       id: 11,
-      items: [
+      items: 
         {
           ProductPicture: "PICTURE",
           ProductName: "DEER STATUE 2",
-          ModelNumber: "RD5543L",
+          ModelNumber: "RD5543L and RD5543S",
           Quantity: 1,
-          Size: "220X190X535",
+          Size: "220X190X535 and 290X180X380",
 
           Price: 20499,
         },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "DEER STATUE 2",
-          ModelNumber: "RD5543S",
-          Quantity: 1,
-          Size: "290X180X380",
-
-          Price: 20499,
-        },
-      ],
+        
     },
     {
       id: 12,
-      items: [
+      items: 
         {
           ProductPicture: "PICTURE",
           ProductName: "CRYSTAL CRANE BIRD",
-          ModelNumber: "RD6151",
+          ModelNumber: "RD6151 and RD6152",
           Quantity: 1,
-          Size: "130X85X360",
+          Size: "130X85X360 and 135X80X310",
 
           Price: 19599,
         },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "CRYSTAL CRANE BIRD",
-          ModelNumber: "RD6152",
-          Quantity: 1,
-          Size: "135X80X10",
-
-          Price: 19599,
-        },
-      ],
+        
     },
     {
       id: 13,
-      items: [
+      items: 
         {
           ProductPicture: "PICTURE",
           ProductName: "LEAF ORNAMENT DECOR",
-          ModelNumber: "RD5894L",
+          ModelNumber: "RD5894L and RD5894S",
           Quantity: 1,
-          Size: "210X120X470",
+          Size: "210X120X470 and 220X160X400",
 
           Price: 18499,
         },
-        {
-          ProductPicture: "PICTURE",
-          ProductName: "LEAF ORNAMENT DECOR",
-          ModelNumber: "RD5894S",
-          Quantity: 1,
-          Size: "220X160X390",
-
-          Price: 18499,
-        },
-      ],
+       
     },
     {
       id: 14,
       items: [
         {
           ProductPicture: "PICTURE",
-          ProductName: "GLASS FISH VASE",
-          ModelNumber: "DECOR",
+          ProductName: "CRYSTAL GLASS HORSE",
+          ModelNumber: "SM-Zs388 and SM-Zs389",
           Quantity: 1,
-          Size: null,
+          Size:"SM-Z s388 and SM-Z s389",
 
           Price: 13599,
         },
@@ -290,8 +194,8 @@ const data = {
       items: [
         {
           ProductPicture: "PICTURE",
-          ProductName: "CRYSTAL WINE HOLDER",
-          ModelNumber: "RD6149",
+          ProductName: "HALF COVERED BLACK AND WHITE HOSRE",
+          ModelNumber: "SM-BUJ448",
           Quantity: 1,
           Size: "240X90X300",
 
@@ -304,8 +208,8 @@ const data = {
       items: [
         {
           ProductPicture: "PICTURE",
-          ProductName: "GOLDEN HORSE",
-          ModelNumber: "RD6789",
+          ProductName: "BIRD NEIGHBORS",
+          ModelNumber: "SM-Z s280 and SM-Z s281",
           Quantity: 1,
           Size: "180X100X350",
 
@@ -314,14 +218,14 @@ const data = {
       ],
     },
     {
-      IDBCursor: 17,
+      id: 17,
       items: [
         {
           ProductPicture: "PICTURE",
-          ProductName: "SILVER ELEPHANT",
-          ModelNumber: "RD6790",
-          Quantity: 1,
-          Size: "150X90X300",
+          ProductName: "STUNNING METAL EAGLE",
+          ModelNumber: "RD5885L and RD5885S",
+          Quantity: 1"Set of 2",
+          Size: "130X70X150 and 120X70X210",
 
           Price: 21999,
         },
