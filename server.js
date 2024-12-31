@@ -72,7 +72,7 @@ const sendMessage = async (mobile, token) => {
   }
 };
 
-app.post("/signup", async (req, res) => {
+app.post("/api/signup", async (req, res) => {
   try {
     const { name, email, password, phone } = req.body;
 
@@ -127,7 +127,7 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-app.post("/verify-otp", (req, res) => {
+app.post("/api/verify-otp", (req, res) => {
   const { mobileNumber, otp } = req.body;
 
   if (!otp || !mobileNumber) {
@@ -145,7 +145,7 @@ app.post("/verify-otp", (req, res) => {
   }
 });
 
-app.post("/login", async (req, res) => {
+app.post("/api/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
@@ -167,7 +167,7 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.get("/products", async (req, res) => {
+app.get("/api/products", async (req, res) => {
   try {
     const products = await ProductModel.find();
     if (products.length === 0) {
@@ -180,7 +180,7 @@ app.get("/products", async (req, res) => {
   }
 });
 
-app.get("/products/:id", async (req, res) => {
+app.get("/api/products/:id", async (req, res) => {
   const { id } = req.params;
   try {
     const product = await ProductModel.findOne({ id });
