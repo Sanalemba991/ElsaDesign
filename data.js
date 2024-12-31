@@ -3,7 +3,7 @@ const data = {
     {
       id: 1,
 
-      ProductPicture: "/images/1.jpeg",
+      ProductPicture: "localhost:4000/images/1.png",
       ProductName: "AGATE ORNAMENT",
       ModelNumber: "RD3927S and RD3927L ",
       Quantity: "1 set of 2",
@@ -13,7 +13,7 @@ const data = {
     {
       id: 2,
 
-      ProductPicture: "/images/2.png",
+      ProductPicture: "localhost:4000/images/2.png",
       ProductName: "RESIN SCULPTURE",
       ModelNumber: "SM-BJ721",
       Quantity: "1",
@@ -24,7 +24,7 @@ const data = {
     {
       id: 3,
 
-      ProductPicture: "/images/3.png",
+      ProductPicture: "localhost:4000/images/3.png",
       ProductName: "CRYSTAL FRUIT DECOR",
       ModelNumber: "RD5713 and RD5714",
       Quantity: "1 set of 2",
@@ -35,7 +35,7 @@ const data = {
     {
       id: 4,
 
-      ProductPicture: "/images/4.png",
+      ProductPicture: "localhost:4000/images/4.png",
       ProductName: "GLOBAL TABLE DECOR",
       ModelNumber: "RD3964L and RD3964S",
       Quantity: "1",
@@ -47,7 +47,7 @@ const data = {
     {
       id: 5,
 
-      ProductPicture: "/images/5.png",
+      ProductPicture: "localhost:4000/images/5.png",
       ProductName: "ARTISTIC SWAN",
       ModelNumber: "DECOR",
       Quantity: "1",
@@ -58,7 +58,7 @@ const data = {
     {
       id: 6,
 
-      ProductPicture: "/images/6.png",
+      ProductPicture: "localhost:4000/images/6.png",
       ProductName: "METAL MOUNTAIN",
       ModelNumber: "SM-Z s278 and SM-Z s279",
       Quantity: 1,
@@ -70,7 +70,7 @@ const data = {
     {
       id: 7,
 
-      ProductPicture: "/images/7.png",
+      ProductPicture: "localhost:4000/images/7.png",
       ProductName: "CRYSTAL FLOWER",
       ModelNumber: "RD5712L and RD5712S",
       Quantity: 1,
@@ -81,7 +81,7 @@ const data = {
     {
       id: 8,
 
-      ProductPicture: "/images/8.png",
+      ProductPicture: "localhost:4000/images/8.png",
       ProductName: "RESIN ORNAMENT",
       ModelNumber: "SM-Z s311 and SM-Z s312",
       Quantity: "1 set of 2",
@@ -92,7 +92,7 @@ const data = {
     {
       id: 9,
 
-      ProductPicture: "/images/9.png",
+      ProductPicture: "localhost:4000/images/9.png",
       ProductName: "CAKE STAND SNACKS PLATTER",
       ModelNumber: "DECOR",
       Quantity: "1",
@@ -103,7 +103,7 @@ const data = {
     {
       id: 10,
 
-      ProductPicture: "/images/10.png",
+      ProductPicture: "localhost:4000/images/10.png",
       ProductName: "DEER STATUE",
       ModelNumber: "RD5799L and RD5799S",
       Quantity: "1",
@@ -114,7 +114,7 @@ const data = {
     {
       id: 11,
 
-      ProductPicture: "/images/11.png",
+      ProductPicture: "localhost:4000/images/11.png",
       ProductName: "DEER STATUE 2",
       ModelNumber: "RD5543L and RD5543S",
       Quantity: 1,
@@ -125,7 +125,7 @@ const data = {
     {
       id: 12,
 
-      ProductPicture: "/images/12.png",
+      ProductPicture: "localhost:4000/images/12.png",
       ProductName: "CRYSTAL CRANE BIRD",
       ModelNumber: "RD6151 and RD6152",
       Quantity: "1set of 2",
@@ -136,7 +136,7 @@ const data = {
     {
       id: 13,
 
-      ProductPicture: "/images/13.png",
+      ProductPicture: "localhost:4000/images/13.png",
       ProductName: "LEAF ORNAMENT DECOR",
       ModelNumber: "RD5894L and RD5894S",
       Quantity: "1 set of 2",
@@ -147,7 +147,7 @@ const data = {
     {
       id: 14,
 
-      ProductPicture: "/images/14.png",
+      ProductPicture: "localhost:4000/images/14.png",
       ProductName: "CRYSTAL GLASS HORSE",
       ModelNumber: "SM-Zs388 and SM-Zs389",
       Quantity: "1",
@@ -158,7 +158,7 @@ const data = {
     {
       id: 15,
 
-      ProductPicture: "/images/15.png",
+      ProductPicture: "localhost:4000/images/15.png",
       ProductName: "HALF COVERED BLACK",
       ModelNumber: "SM-BUJ448",
       Quantity: "1",
@@ -169,7 +169,7 @@ const data = {
     {
       id: 16,
 
-      ProductPicture: "/images/16.png",
+      ProductPicture: "localhost:4000/images/16.png",
       ProductName: "HALF COVERED WHITE HOSRE",
       ModelNumber: "SM-BUJ448",
       Quantity: "1",
@@ -180,7 +180,7 @@ const data = {
     {
       id: 17,
 
-      ProductPicture: "/images/17.png",
+      ProductPicture: "localhost:4000/images/17.png",
       ProductName: "BIRD NEIGHBORS",
       ModelNumber: "SM-Z s280 and SM-Z s281",
       Quantity: "1 set of 2",
@@ -189,7 +189,7 @@ const data = {
     {
       id: 18,
 
-      ProductPicture: "/images/18.png",
+      ProductPicture: "localhost:4000/images/18.png",
       ProductName: "STUNNING METAL EAGLE",
       ModelNumber: "RD5885L and RD5885S",
       Quantity: "1 Set of 2",
@@ -200,7 +200,7 @@ const data = {
     {
       id: 19,
 
-      ProductPicture: "/images/19.png",
+      ProductPicture: "localhost:4000/images/19.png",
       ProductName: "HORSE JAR",
       ModelNumber: "SM-Z s268 and SM-Z s269",
       Quantity: "1 Set of 2",
@@ -209,7 +209,7 @@ const data = {
     {
       id: 20,
 
-      ProductPicture: "/images/20.png",
+      ProductPicture: "localhost:4000/images/20.png",
       ProductName: "CERAMIC VASES",
       ModelNumber: "RD3873S and RD3873L",
       Quantity: "1 Set of 2",
@@ -220,7 +220,7 @@ const data = {
     {
       id: 21,
 
-      ProductPicture: "/images/21.png",
+      ProductPicture: "localhost:4000/images/21.png",
       ProductName: "ACRYLIC PRINT DECOR",
       ModelNumber: "RD4587L and RD4587S",
       Quantity: "1 set of 2",
@@ -231,7 +231,7 @@ const data = {
     {
       id: 22,
 
-      ProductPicture: "/images/22.png",
+      ProductPicture: "localhost:4000/images/22.png",
       ProductName: "ONYX CANDLE STAND",
       ModelNumber: "SM-Zs302 , SM-Zs303 and SM-Zs304",
       Quantity: "1 set of 3",
@@ -242,7 +242,7 @@ const data = {
     {
       id: 23,
 
-      ProductPicture: "/images/23.png",
+      ProductPicture: "localhost:4000/images/23.png",
       ProductName: "ABSTRACT SCULPTURE",
       ModelNumber: "SM-Zs307 and SM-Z s308",
       Quantity: "1 set of 2",
@@ -253,7 +253,7 @@ const data = {
     {
       id: 24,
 
-      ProductPicture: "/images/24.png",
+      ProductPicture: "localhost:4000/images/24.png",
       ProductName: "CERAMIC ORNAMENTS FLOWER VASE",
       ModelNumber: "SM-Z282 , SM-Z283 and SM-s284",
       Quantity: "a set of 3",
@@ -265,7 +265,7 @@ const data = {
     {
       id: 25,
 
-      ProductPicture: "/images/25.png",
+      ProductPicture: "localhost:4000/images/25.png",
       ProductName: "CERAMIC VASES",
       ModelNumber: "RD3875S and RD3875L",
       Quantity: 1,

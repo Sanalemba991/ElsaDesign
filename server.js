@@ -7,17 +7,16 @@ const otplib = require("otplib");
 const UserModel = require("./model/User.js");
 const data = require("./data.js");
 const ProductModel = require("./model/Product");
-const cors = require("cors"); 
+const cors = require("cors");
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-
 app.use(cors());
 
-app.use('/images', express.static('images'));
+app.use("/images", express.static("images"));
 
 mongoose
   .connect(process.env.MONGO_URI)
@@ -65,7 +64,10 @@ const sendMessage = async (mobile, token) => {
     console.log("OTP sent successfully:", response);
     return { success: true, message: "OTP sent successfully!" };
   } catch (error) {
-    console.error("Error details:", error.response ? error.response.data : error);
+    console.error(
+      "Error details:",
+      error.response ? error.response.data : error
+    );
     return { success: false, message: "Failed to send OTP." };
   }
 };

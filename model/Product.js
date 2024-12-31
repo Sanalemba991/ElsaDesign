@@ -2,8 +2,11 @@ const mongoose = require("mongoose");
 
 const productSchema = new mongoose.Schema({
   id: Number,
-
-  ProductPicture: String,
+  ProductPicture: {
+    type: String,
+    match: [/^https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg)$/, 'Please fill a valid URL'],
+    required: [true, 'Product picture URL is required'],
+  },
   Name: String,
   ProductName: String,
   Quantity: String,
